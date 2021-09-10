@@ -16,7 +16,7 @@ const create = async (req, res, next) => {
 const findById = async (req, res, next) => {
   const { id } = req.params;
 
-  const productData = productsService.findById(id);
+  const productData = await productsService.findById(id);
 
   if (productData.error) return next(productData.error);
 
