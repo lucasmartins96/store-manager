@@ -46,9 +46,26 @@ const getAll = async () => {
   }
 };
 
+const update = async ({ id, name, quantity }) => {
+  const db = await connection();
+  const userId = new ObjectId(id);
+  const newData = { name, quantity };
+  try {
+    await db.collection(productsCollection).updateOne({ _id: userId }, { $set: newData });
+    return {
+      _id: userId,
+      name,
+      quantity,
+    };
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 module.exports = {
   create,
   findByName,
   findById,
   getAll,
+  update,
 };
