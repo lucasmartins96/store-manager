@@ -21,8 +21,8 @@ const create = async (name, quantity) => {
   const isValid = validateFields({ name, quantity });
   if (isValid) return isValid;
 
-  const productCreated = await productsModel.create(name, quantity);
-  return productCreated;
+  const newProduct = await productsModel.create(name, quantity);
+  return newProduct;
 };
 
 module.exports = {
