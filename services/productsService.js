@@ -39,7 +39,10 @@ const findById = async (id) => {
   return productData;
 };
 
+const getAll = async () => productsModel.getAll();
+
 module.exports = {
   create,
   findById,
+  getAll,
 };
