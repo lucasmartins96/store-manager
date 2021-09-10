@@ -7,8 +7,9 @@ const handleErrors = (err, _req, res, _next) => {
   };
 
   const status = statusByErrorCode[err.code] || 500;
+  const code = err.code.toLowerCase();
 
-  res.status(status).json({ error: { message: err.message } });
+  res.status(status).json({ err: { code, message: err.message } });
 };
 
 module.exports = {
