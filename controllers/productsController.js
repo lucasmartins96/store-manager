@@ -23,7 +23,14 @@ const findById = async (req, res, next) => {
   res.status(OK_STATUS_CODE).json(productData);
 };
 
+const getAll = async (req, res) => {
+  const products = await productsService.getAll();
+
+  res.status(OK_STATUS_CODE).json({ products });
+};
+
 module.exports = {
   create,
   findById,
+  getAll,
 };
