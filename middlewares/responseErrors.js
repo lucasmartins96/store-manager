@@ -3,7 +3,7 @@ const handleErrors = (err, _req, res, _next) => {
     badRequest: 400,
     notFound: 404,
     alreadyExists: 409,
-    invalidData: 422,
+    INVALID_DATA: 422,
   };
 
   const status = statusByErrorCode[err.code] || 500;
