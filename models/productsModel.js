@@ -13,6 +13,16 @@ const create = async (name, quantity) => {
   };
 };
 
+const findByName = async (name) => {
+  const db = await connection();
+  const product = await db.collection(productsCollection).findOne({ name });
+
+  if (!product) return null;
+
+  return product;
+};
+
 module.exports = {
   create,
+  findByName,
 };
