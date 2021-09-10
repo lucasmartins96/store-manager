@@ -14,7 +14,7 @@ const validateFields = (productData) => {
   if (error) {
     const { details } = error;
     const [errorDetail] = details;
-    return { error: { code: 'invalidData', message: errorDetail.message } };
+    return { error: { code: 'INVALID_DATA', message: errorDetail.message } };
   }
   return false;
 };
