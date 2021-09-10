@@ -39,7 +39,7 @@ const findById = async (id) => {
 const getAll = async () => {
   try {
     const db = await connection();
-    const products = await db.collection(productsCollection).find({});
+    const products = await db.collection(productsCollection).find({}).toArray();
     return products;
   } catch (error) {
     console.error(error);
