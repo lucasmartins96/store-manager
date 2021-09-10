@@ -5,7 +5,9 @@ const validateFields = (productData) => {
   const { error } = Joi.object({
     name: Joi.string().not().empty().min(5)
 .required(),
-    quantity: Joi.number().not().empty().min(1)
+    quantity: Joi.number().strict().integer().not()
+.empty()
+.min(1)
 .required(),
   }).validate(productData);
 
