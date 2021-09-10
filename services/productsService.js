@@ -41,8 +41,18 @@ const findById = async (id) => {
 
 const getAll = async () => productsModel.getAll();
 
+const update = async (product) => {
+  const { name, quantity } = product;
+  const isInvalid = validateFields({ name, quantity });
+  if (isInvalid) return isInvalid;
+
+  const productUpdated = productsModel.update(product);
+  return productUpdated;
+};
+
 module.exports = {
   create,
   findById,
   getAll,
+  update,
 };
