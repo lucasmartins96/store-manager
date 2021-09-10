@@ -5,10 +5,10 @@ const OPTIONS = {
   useUnifiedTopology: true,
 };
 
-// para desenvolvimento local
+// para testes locais
 // const MONGO_DB_URL = 'mongodb://localhost:27017/StoreManager';
 
-// para teste
+// para avaliador
 const MONGO_DB_URL = 'mongodb://mongodb:27017/StoreManager';
 const DB_NAME = 'StoreManager';
 
