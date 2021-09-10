@@ -20,8 +20,12 @@ const validateFields = (productData) => {
 };
 
 const create = async (name, quantity) => {
-  const isValid = validateFields({ name, quantity });
-  if (isValid) return isValid;
+  const isInvalid = validateFields({ name, quantity });
+  if (isInvalid) return isInvalid;
+
+  const existsProduct = await productsModel.findByName(name);
+
+  if (existsProduct) return { error: { code: 'INVALID_DATA', message: 'Product already exists' } };
 
   const newProduct = await productsModel.create(name, quantity);
   return newProduct;
