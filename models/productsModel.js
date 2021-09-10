@@ -36,8 +36,19 @@ const findById = async (id) => {
   return productData;
 };
 
+const getAll = async () => {
+  try {
+    const db = await connection();
+    const products = await db.collection(productsCollection).find({});
+    return products;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 module.exports = {
   create,
   findByName,
   findById,
+  getAll,
 };
