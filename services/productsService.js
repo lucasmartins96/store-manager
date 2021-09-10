@@ -3,7 +3,7 @@ const productsModel = require('../models/productsModel');
 
 const validateFields = (productData) => {
   const { error } = Joi.object({
-    name: Joi.string().not().empty().min(6)
+    name: Joi.string().not().empty().min(5)
 .required(),
     quantity: Joi.number().not().empty().min(1)
 .required(),
