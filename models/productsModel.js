@@ -62,10 +62,26 @@ const update = async ({ id, name, quantity }) => {
   }
 };
 
+const deleteById = async (id) => {
+  if (!ObjectId.isValid(id)) {
+    return null;
+  }
+  const userId = new ObjectId(id);
+
+  const db = await connection();
+  const productData = await db.collection(productsCollection).findOneAndDelete({ _id: userId });
+
+  if (!productData) return null;
+
+  const { value } = productData;
+  return value;
+};
+
 module.exports = {
   create,
   findByName,
   findById,
   getAll,
   update,
+  deleteById,
 };
