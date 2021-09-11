@@ -31,6 +31,18 @@ const create = async (itensSold) => {
   return insertedSales;
 };
 
+const findById = async (id) => {
+  const salesData = await salesModel.findById(id);
+
+  if (!salesData) return { error: { code: 'NOT_FOUND', message: 'Sale not found' } };
+
+  return salesData;
+};
+
+const getAll = async () => salesModel.getAll();
+
 module.exports = {
   create,
+  findById,
+  getAll,
 };
