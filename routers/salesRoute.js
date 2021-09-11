@@ -11,6 +11,8 @@ router.get('/:id', salesController.findById)
 
 router.put('/:id', salesController.update);
 
+router.delete('/:id', salesController.deleteById);
+
 router.use(handleErrors);
 
 module.exports = router;
