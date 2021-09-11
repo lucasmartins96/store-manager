@@ -1,5 +1,6 @@
 const express = require('express');
 const productsRouter = require('./routers/productsRoute');
+const salesRouter = require('./routers/salesRoute');
 
 const PORT = 3000;
 const app = express();
@@ -11,5 +12,7 @@ app.get('/', (_request, response) => {
 });
 
 app.use('/products', productsRouter);
+
+app.use('/sales', salesRouter);
 
 app.listen(PORT, () => console.log('server running on port 3000'));
