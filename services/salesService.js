@@ -1,10 +1,7 @@
 const Joi = require('joi');
 const salesModel = require('../models/salesModel');
 
-const validateDocuments = (documents) => {
-  // Será validado que não é possível cadastrar vendas com quantidade menor que zero
-  // Será validado que não é possível cadastrar vendas com quantidade igual a zero
-  // Será validado que não é possível cadastrar vendas com uma string no campo quantidade 
+const validateDocuments = (documents) => { 
   const { error } = Joi.array().items(
     Joi.object({
       productId: Joi.string().length(24).required(),
