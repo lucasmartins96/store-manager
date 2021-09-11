@@ -1,4 +1,5 @@
 const Joi = require('joi');
+const { ObjectId } = require('mongodb');
 const salesModel = require('../models/salesModel');
 
 const validateDocuments = (documents) => { 
@@ -54,9 +55,21 @@ const update = async (saleToUpdate) => {
   return saleUpdated;
 };
 
+const deleteById = async (id) => {
+  if (!ObjectId.isValid(id)) {
+    return { error: { code: 'INVALID_DATA', message: 'Wrong sale ID format' } };
+  }
+  const saleDeletedData = await salesModel.deleteById(id);
+
+  if (!saleDeletedData) return { error: { code: 'NOT_FOUND', message: 'Sale not found' } };
+
+  return saleDeletedData;
+};
+
 module.exports = {
   create,
   findById,
   getAll,
   update,
+  deleteById,
 };
