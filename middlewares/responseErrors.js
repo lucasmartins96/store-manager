@@ -1,8 +1,6 @@
 const handleErrors = (err, _req, res, _next) => {
   const statusByErrorCode = {
-    badRequest: 400,
-    notFound: 404,
-    alreadyExists: 409,
+    NOT_FOUND: 404,
     INVALID_DATA: 422,
   };
 
