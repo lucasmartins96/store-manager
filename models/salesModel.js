@@ -36,8 +36,22 @@ const getAll = async () => {
   }
 };
 
+const update = async ({ id, itensSold }) => {
+  const db = await connection();
+  const userId = new ObjectId(id);
+  try {
+    const { value } = await db.collection(salesCollection)
+      .findOneAndUpdate({ _id: userId }, { $set: { itensSold } }, { returnDocument: 'after' });
+
+      return value;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 module.exports = {
   create,
   findById,
   getAll,
+  update,
 };

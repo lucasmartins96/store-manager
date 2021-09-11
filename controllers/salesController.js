@@ -28,8 +28,20 @@ const getAll = async (req, res) => {
   res.status(OK_STATUS_CODE).json({ sales });
 };
 
+const update = async (req, res, next) => {
+  const itensSold = req.body;
+  const { id } = req.params;
+  const saleData = { id, itensSold };
+
+  const saleUpdated = await salesService.update(saleData);
+  if (saleUpdated.error) return next(saleUpdated.error);
+
+  return res.status(OK_STATUS_CODE).json(saleUpdated);
+};
+
 module.exports = {
   create,
   findById,
   getAll,
+  update,
 };

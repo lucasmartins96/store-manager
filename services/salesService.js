@@ -41,8 +41,22 @@ const findById = async (id) => {
 
 const getAll = async () => salesModel.getAll();
 
+const update = async (saleToUpdate) => {
+  const { itensSold } = saleToUpdate;
+  const areDocumentsValid = validateDocuments(itensSold);
+  if (!areDocumentsValid) {
+    return { 
+      error: { code: 'INVALID_DATA', message: 'Wrong product ID or invalid quantity' }, 
+    };
+  }
+
+  const saleUpdated = salesModel.update(saleToUpdate);
+  return saleUpdated;
+};
+
 module.exports = {
   create,
   findById,
   getAll,
+  update,
 };
