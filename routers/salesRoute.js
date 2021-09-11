@@ -9,6 +9,8 @@ router.post('/', salesController.create);
 router.get('/:id', salesController.findById)
       .get('/', salesController.getAll);
 
+router.put('/:id', salesController.update);
+
 router.use(handleErrors);
 
 module.exports = router;
