@@ -97,7 +97,7 @@ const updateQuantity = async (operation, itensSold) => {
     const incQuantity = (operation === 'decrease') ? { quantity: -quantity } : { quantity };
 
     return db.collection(productsCollection).findOneAndUpdate(
-      { _id: ObjectId(productId) },
+      buildFilterByOperation(operation, productId, quantity),
       { $inc: incQuantity },
       { returnDocument: 'after' },
     );
