@@ -77,6 +77,15 @@ const deleteById = async (id) => {
   return value;
 };
 
+const buildFilterByOperation = (operation, productId, quantity) => {
+  switch (operation) {
+    case 'decrease':
+      return { $and: [{ _id: ObjectId(productId) }, { $expr: { $lt: [quantity, '$quantity'] } }] };
+    default:
+      return { $and: [{ _id: ObjectId(productId) }] };
+  }
+};
+
 const updateQuantity = async (operation, itensSold) => {
   if (operation !== 'decrease' && operation !== 'increase') {
     return null;
