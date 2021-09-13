@@ -1,5 +1,6 @@
 const handleErrors = (err, _req, res, _next) => {
   const statusByErrorCode = {
+    STOCK_PROBLEM: 404,
     NOT_FOUND: 404,
     INVALID_DATA: 422,
   };
