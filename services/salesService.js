@@ -29,7 +29,12 @@ const create = async (itensSold) => {
   }
 
   const insertedSales = await salesModel.create(itensSold);
-  await productsModel.updateQuantity('decrease', itensSold);
+  const resultUpdate = await productsModel.updateQuantity('decrease', itensSold);
+  if (!resultUpdate) {
+    return { 
+      error: { code: 'STOCK_PROBLEM', message: 'Such amount is not permitted to sell' }, 
+    };
+  }
 
   return insertedSales;
 };
