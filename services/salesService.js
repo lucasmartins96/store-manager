@@ -1,6 +1,7 @@
 const Joi = require('joi');
 const { ObjectId } = require('mongodb');
 const salesModel = require('../models/salesModel');
+const productsModel = require('../models/productsModel');
 
 const validateDocuments = (documents) => { 
   const { error } = Joi.array().items(
@@ -28,6 +29,7 @@ const create = async (itensSold) => {
   }
 
   const insertedSales = await salesModel.create(itensSold);
+  await productsModel.updateQuantity('decrease', itensSold);
 
   return insertedSales;
 };
@@ -59,9 +61,12 @@ const deleteById = async (id) => {
   if (!ObjectId.isValid(id)) {
     return { error: { code: 'INVALID_DATA', message: 'Wrong sale ID format' } };
   }
+
   const saleDeletedData = await salesModel.deleteById(id);
 
   if (!saleDeletedData) return { error: { code: 'NOT_FOUND', message: 'Sale not found' } };
+
+  await productsModel.updateQuantity('increase', saleDeletedData.itensSold);
 
   return saleDeletedData;
 };
