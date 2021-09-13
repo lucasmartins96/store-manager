@@ -77,6 +77,26 @@ const deleteById = async (id) => {
   return value;
 };
 
+const updateQuantity = async (operation, itensSold) => {
+  if (operation !== 'decrease' && operation !== 'increase') {
+    return null;
+  }
+
+  const db = await connection();
+
+  const updateQuantityPromises = itensSold.map(({ productId, quantity }) => {
+    const incQuantity = (operation === 'decrease') ? { quantity: -quantity } : { quantity };
+
+    return db.collection(productsCollection).findOneAndUpdate(
+      { _id: ObjectId(productId) },
+      { $inc: incQuantity },
+      { returnDocument: 'after' },
+    );
+  });
+
+  await Promise.all(updateQuantityPromises);
+};
+
 module.exports = {
   create,
   findByName,
@@ -84,4 +104,5 @@ module.exports = {
   getAll,
   update,
   deleteById,
+  updateQuantity,
 };
