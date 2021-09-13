@@ -103,7 +103,8 @@ const updateQuantity = async (operation, itensSold) => {
     );
   });
 
-  await Promise.all(updateQuantityPromises);
+  const promiseResults = await Promise.all(updateQuantityPromises);
+  return promiseResults.every(({ value }) => value);
 };
 
 module.exports = {
