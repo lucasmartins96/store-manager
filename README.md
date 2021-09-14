@@ -8,13 +8,13 @@ Api de gerenciamento de vendas
 Sumário
 =================
 <!--ts-->
-  * [Sobre](##Sobre)
-  * [Features](##Features)
-  * [Como executar o projeto](##%F0%9F%9A%80Como%20executar%20o%20projeto)
-    * [Pré Requisitos](##Pré-requisitos)
-    * [Rodando o back-end](###Rodando%20o%20Back%20End%20(servidor)%20%F0%9F%8E%B2)
-  * [Tecnologias](##%F0%9F%9B%A0Tecnologias)
-  * [Autor](##%F0%9F%A6%B8%E2%80%8D%E2%99%82%EF%B8%8FAutor)
+  * [Sobre](#sobre)
+  * [Features](#features)
+  * [Como executar o projeto](#-como-executar-o-projeto)
+    * [Pré Requisitos](#pré-requisitos)
+    * [Rodando o back-end](#-rodando-o-backend-servidor)
+  * [Tecnologias](#-tecnologias)
+  * [Autor](#-autor)
 <!--te-->
 
 ## Sobre
