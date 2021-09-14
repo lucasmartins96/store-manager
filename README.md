@@ -74,10 +74,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <a href="https://github.com/lucasmartins96">
  <img style="border-radius: 50%;" src="https://i.ibb.co/9qyGrPz/133705661-2282303861913690-7277653750101206726-o.jpg" width="100px;" alt=""/>
  <br />
- <sub><b>Lucas Martins</b></sub></a> <a href="https://blog.rocketseat.com.br/author/thiago//" title="Rocketseat">🚀</a>
+ <sub><b>Lucas Martins</b></sub></a> <a href="https://github.com/lucasmartins96" title="Rocketseat">🚀</a>
 
 
 Feito por Lucas Martins 👋 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Lucas%20Martins-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lumartins-silva/)](https://www.linkedin.com/in/lumartins-silva/) 
-[![Gmail Badge](https://img.shields.io/badge/-lucasmartins.dsilva@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucasmartins.dsilva@gmail.com)](lucasmartins.dsilva@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-lucasmartins.dsilva@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucasmartins.dsilva@gmail.com)](mailto:lucasmartins.dsilva@gmail.com)
