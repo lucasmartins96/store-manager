@@ -38,14 +38,14 @@ Projeto desenvolvido na Trybe no bloco sobre Camada de Serviço e Arquitetura Re
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [MongoDB](https://www.mongodb.com/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 ### Rodando o Back End (servidor) 🎲
 
 ```bash
 # Clone este repositório
-$ git clone <git@github.com:lucasmartins96/store-manager.git>
+$ git clone git@github.com:lucasmartins96/store-manager.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd store-manager
@@ -53,10 +53,10 @@ $ cd store-manager
 # Instale as dependências
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
+# Execute a aplicação
 $ npm start
 
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000/products>
+# O servidor inciará na porta:3000 - acesse http://localhost:3000/products
 ```
 ## 🛠Tecnologias 
 
