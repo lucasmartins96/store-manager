@@ -68,7 +68,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ](http://mongodb.github.io/node-mongodb-native/3.6/api/index.html)
 - [Joi](https://joi.dev/api/)
 
-### 🦸‍♂️Autor
+## 🦸‍♂️Autor
 ---
 
 <a href="https://github.com/lucasmartins96">
