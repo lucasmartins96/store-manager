@@ -10,11 +10,11 @@ Sumário
 <!--ts-->
   * [Sobre](#sobre)
   * [Features](#features)
-  * [Como executar o projeto](#-como-executar-o-projeto)
+  * [Como executar o projeto](#como-executar-o-projeto)
     * [Pré Requisitos](#pré-requisitos)
-    * [Rodando o back-end](#-rodando-o-backend-servidor)
+    * [Rodando o back-end](#rodando-o-back-end-servidor-)
   * [Tecnologias](#-tecnologias)
-  * [Autor](#-autor)
+  * [Autor](#%EF%B8%8Fautor)
 <!--te-->
 
 ## Sobre
