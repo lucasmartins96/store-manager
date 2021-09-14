@@ -13,7 +13,7 @@ Sumário
   * [Como executar o projeto](#como-executar-o-projeto)
     * [Pré Requisitos](#pré-requisitos)
     * [Rodando o back-end](#rodando-o-back-end-servidor-)
-  * [Tecnologias](#-tecnologias)
+  * [Tecnologias](#tecnologias)
   * [Autor](#%EF%B8%8Fautor)
 <!--te-->
 
