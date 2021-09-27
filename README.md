@@ -44,19 +44,20 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ### Rodando o Back End (servidor) 🎲
 
 ```bash
+# Informe os comandos no terminal, caso o SO seja Windows, informe os comandos no GitBash
 # Clone este repositório
-$ git clone git@github.com:lucasmartins96/store-manager.git
+git clone git@github.com:lucasmartins96/store-manager.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd store-manager
+cd store-manager
 
 # Instale as dependências
-$ npm install
+npm install
 
 # Execute a aplicação
-$ npm start
+npm start
 
-# O servidor inciará na porta:3000 - acesse http://localhost:3000/products
+# O servidor inciará na porta:3000
 ```
 ## 🛠Tecnologias 
 
