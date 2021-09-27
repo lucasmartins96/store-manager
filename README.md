@@ -44,7 +44,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ### Rodando o Back End (servidor) 🎲
 
 ```bash
-# Informe os comandos no terminal, caso o SO seja Windows, informe os comandos no GitBash
+# Informe os seguintes comandos no terminal, caso o SO seja Windows, informe os comandos no GitBash
 # Clone este repositório
 git clone git@github.com:lucasmartins96/store-manager.git
 
@@ -53,6 +53,12 @@ cd store-manager
 
 # Instale as dependências
 npm install
+
+# Certifique que o MongoDB esteja executando
+sudo services mongod status
+
+# Caso apareça inactive(dead) em "Active", aperte a letra "q" para sair do modo de visualização e execute o comando abaixo
+sudo services mongod start
 
 # Execute a aplicação
 npm start
